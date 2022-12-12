@@ -11,10 +11,10 @@ Chaque séance aura un répertoire dédié avec le contenu nécessaire:
 - Notebooks
 - etc...
 
->Dans chaque dossier de TP, vous trouvere une documentation à suivre dans le fichier README.md.
+>Dans chaque dossier de TP, vous trouverez une documentation à suivre dans le fichier README.md.
 Ce dernier vous sera affiché par défaut dans Github, lorsque vous ouvrirez le dossier.
 
-Ces README.md sont très importants car pouvant inclure des pré-requis ou des informatioins critiques.
+Ces fichiers README.md sont très importants, car pouvant inclure des pré-requis ou des informations critiques.
 
 Les TPs sont donc :
 - [MongoDB avec MongoShell et les outils Mongo](tp_1)
