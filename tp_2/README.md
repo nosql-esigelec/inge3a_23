@@ -1,4 +1,4 @@
-# TP 2 : MongoDB avec Python
+# TP 2 : MongoDB with Python
 
 Dans ce TP, nous allons découvrir l'utilisation de MongoDB avec le driver officiel Python : **PyMongo**.
 

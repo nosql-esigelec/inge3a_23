@@ -1,6 +1,8 @@
 
 
 # Interagir avec les bases de données
+[![to complete](https://img.shields.io/badge/TP_1_:_MongoDB_Basics-2ea44f)](https://github.com/nosql-esigelec/inge3a_23/tree/main/tp_2)
+
 Avant de commencer ce TP, assurez-vous d'avoir suivi les instructions du [document de configuration](tp_1_configurations.pdf).
 ## Local Database
 **Connexion à une base de données locale**

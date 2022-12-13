@@ -1,4 +1,4 @@
-# TP 1 : MongoDB Tools: Shell, Atlas, Compass
+# TP 1 : MongoDB Basics
 
 Dans ce premier TP, nous allons découvrir l'utilisation de MongoDB à travers quelques outils tels que:
 
