@@ -36,6 +36,7 @@ Afin de mener à bien ce TP, bien vouloir prendre connaissance des informations 
 # 1- Introduction à PyMongo
 
 Dans cette partie, téléchargez ce [notebook](getting_started_with_pymongo.ipynb) sur votre machine, puis ouvrez-le sur Jupyter notebook/lab.
+Ici, nous allons effectuer nos premières opérations de **CRUD** : Create, Read, Update and Read via PyMongo. Une fois cette partie d'introduction terminée, nous passerons à la partie MFlix.
 # 2- MFlix 
 
 L'application MFlix a deux composantes principales :
