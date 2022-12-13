@@ -2,8 +2,16 @@
 
 Dans ce TP, nous allons découvrir l'utilisation de MongoDB avec le driver officiel Python : **PyMongo**.
 
-Nous allons utiliser un mini-projet durant ce TP: **MFLIX**. 
+Ce TP s'articulera en 2 parties:
+- **Notebook** 
+
+Dans un [notebook](mongodb_with_python_part1.ipynb), nous ferons une introduction à l'utilisation de PyMongo.
+- **MFLIX**
+
+Nous utiliserons le projet [MFLIX](), en guise de cas pratique. C'est une application dont l'interface graphique est développée, mais il manque des fonctionnalités à implémenter notamment celles qui interagissent avec la base de données. 
+ 
 Il s'agit d'une application web permettant de consulter et de noter des films.
+Son interface graphique est développée, mais il manque des fonctionnalités à implémenter notamment celles qui interagissent avec la base de données. 
 
 Durant le TP, nous allons mettre en place des requêtes permettant à des utilisateurs de :
 

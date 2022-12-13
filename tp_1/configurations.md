@@ -1,6 +1,9 @@
 
-Pour les séances de TP, quelques pré-requis sont à respecter.
+# Configurations et prérequis 
+Pour cette séance de TP, nous aurons besoin de :
+
 - [Créer un bac à sable](#créer-une-sandbox-ou-bac-à-sable)
+- [Charger des échantillons de données](#charger-des-echantillons-de-donnees)
 - [Installer un serveur MongoDB](#installer-mongodb-server)
 - [Installer Mongo Shell](#installer-mongo-shell)
 - [Installer les outils Mongo](#installer-les-outils-mongo)
@@ -52,13 +55,29 @@ Les configurations terminées, on obtient cet écran avec une base de données d
 
 ![database-deployed](../data/images/database-deployed.png)
 Afin de se connecter, nous aurons besoin d'une chaine de connexion. Récupérez là en cliquant sur **Connect**.
-Ensuite, choisissez **Connect using MongoDB Compass**, sélectionner votre système d'exploitation, puis copier l'URL de connextion qui ressemble à celle ci:  `mongodb+srv://brice:<password>@cluster0.5cy4vr9.mongodb.net/test`.
+Ensuite, choisissez **Connect using MongoDB Compass**, sélectionner votre système d'exploitation, puis copier l'URL de connexion qui ressemble à celle ci :  `mongodb+srv://brice:<password>@cluster0.5cy4vr9.mongodb.net/test`.
 
 ![connect-with-compass](../data/images/connect-with-compass.png)
 
 Nous nous servirons de cette URL dans nos prochaines séances de TP.
+
+##**Charger des échantillons de données**
+
+Une fois votre base de données créée et configurée, cliquez sur les 3 points (...), puis sélectionnez then **Load Sample Dataset**, comme ci-dessous
+    
+![](https://d36ai2hkxl16us.cloudfront.net/course-uploads/ae62dcd7-abdc-4e90-a570-83eccba49043/lpkdjy41f7j4-image.png)
+
+Cliquez sur **Load Sample Dataset** Le chargement des données va démarrer et durer quelques instants. 
+![](https://d36ai2hkxl16us.cloudfront.net/course-uploads/ae62dcd7-abdc-4e90-a570-83eccba49043/qqo029re9jrq-image.png)
+Une fois le chargement terminé, cliquez sur **Browse Collections** pour consulter les données via l'explorateur.
+![](https://d36ai2hkxl16us.cloudfront.net/course-uploads/ae62dcd7-abdc-4e90-a570-83eccba49043/o24ftzx7nyhn-image.png)
+Consultez et sélectionnez des bases de données et collections dans l'onglet Collection à la gauche de l'écran.
+
+![](https://d36ai2hkxl16us.cloudfront.net/course-uploads/ae62dcd7-abdc-4e90-a570-83eccba49043/9p2ky44ojs92-image.png)
+Une fois que vos données sont chargées, suivez la suite des instructions.
+
 ## **Installer MongoDB server**
-Télécharger le serveur Mongo DB via le lien suivant:
+Télécharger le serveur Mongo DB via le lien suivant :
 https://www.mongodb.com/try/download/community
 Choisir le fichier .msi pour installer correctement Mongo.
 Une fois l'installation terminée, ajouter le chemin `C:\Program Files\MongoDB\Server\6.0\bin` de Mongo DB à la variable d'envrionnment Path du système.

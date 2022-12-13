@@ -1,11 +1,11 @@
 
----
-#nosql #atlas 
----
+
 # Interagir avec les bases de données
-Avant de commencer ce TP, bien vouloir suivre les instructions ddocument **TP_1_Configurations**.
+Avant de commencer ce TP, assurez-vous d'avoir suivi les instructions du [document de configuration](tp_1_configurations.pdf).
 ## Local Database
-**Connexion à la base de données locale**
+**Connexion à une base de données locale**
+
+Ouvrez un **terminal**/**invite de commande** et tapez:
 ```PowerShell
 $mongosh 
 ```
@@ -260,22 +260,25 @@ mongoimport --type csv -d productDB -c products --headerline --drop product
 **N.B** : La méthode insertOne permet d’insérer un document. Lorsque le champ `_id` n’est pas mentionné, mongoDB va créer ce champ et lui affecter une valeur, dans ce cas de type « Object ID ». L’unicité est garantie.
 Même s’il est possible de stocker dans un même champ des données de type différent, ce n’est pas une bonne pratique.
 ## Cloud Database 
-### Load sample datasets
-[[Load sample Dataset]]
+> Assurez vous d'avoir chargé les échantillons de données avant de démarrer cette partie.
+
+Connectez-vous à votre DBaaS en utilisant votre lien de connexion provenant de Mongo Atlas. 
 ```shell
 mongosh mongodb+srv://{USERNAME}:{PASSWORD}@cluster0.rdty5gv.mongodb.net
 ```
 <span style="background:green; color:white">**TAF: Vérifier que l'existence des données chargées. Il s'agit de 9 databases nommées suivant le pattern sample_**
 ### Exploration de données avec Mongo Compass
-#### Généralités 
-Se connecter au cluster Atlas sur Mongo Compass via la chaine de connexion du cluster.
-**Explorer la base de données sample_analystics.**
-<span style="background:green; color:white">**TAF: Décrire cette base de données en la comparant à une base de données relationnelle.**
+
+Ouvrir MongoDB Compass, puis se connecter au cluster Atlas via la chaine de connexion du cluster.
+
+**Explorer la base de données sample_analytics.**
+
+<span style="background:green; color:white">**TAF : Décrire cette base de données en la comparant à une base de données relationnelle.**
 - Combien de tables y a-t-il? 
 - Y a-t-il des relations entre les tables ? Si oui Lesquelles ?
 - La notion de normalisation est-elle respectée dans cette base de données ? Expliquer.
 
-<span style="background:green; color:white">**TAF: Décrire les données d'un document de la collection `customers`**.==
+<span style="background:green; color:white">**TAF : Décrire les données d'un document de la collection `customers`**.==
 - Quels sont les types de chaque champ ?
 - Ces types sont-ils tous utilisables dans une base de données type MySQL ? Sinon, lesquels ?
 **Analyse de schéma**

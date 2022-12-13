@@ -1,5 +1,4 @@
 In this TP we'll use MongoDB with the python driver PyMongo.
-
 # Overview
 
 We are going to have series of README instructions to be able to setup our MFLIX application successfully. With MFLIX application, you will learn to:
