@@ -101,10 +101,10 @@ pip install -r requirements.txt
 
 À la racine du projet, se trouvent 2 fichiers dotini.
 Ouvrir ce fichier et saisir la chaine de connection de son cluster Atlas.
-Rassurez-vous de mettre cette information entre quotes comme ci-dessous :
+Rassurez-vous de ne pas mettre cette information entre quotes :
 
 ```
-MFLIX_DB_URI = "mongodb+srv://..."
+MFLIX_DB_URI = mongodb+srv://...
 ```
 
 Renommer ce fichier .ini avec l'une des commandes :  
