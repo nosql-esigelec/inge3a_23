@@ -67,7 +67,7 @@ Une fois un IDE choisi, récupérez le code du projet [![to complete](https://im
 - Actualiser l'écran. 
 - Choisissez votre nom dans la liste des étudiants
 - Cliquer sur Open in Visual Studio Code
-![img.png](img.png)
+![img.png](../data/images/classroom-assignment.png)
 
 ## Anaconda
 Nous allons utiliser  Anaconda  pour installer Python 3.7 et gérer l'environnement.
