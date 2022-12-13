@@ -65,7 +65,7 @@ Afin d'être correctement exécuté, le projet MFlix a besoin que certaines dép
 
 ## IDE
 Choisissez un IDE pour exécuter et tester votre code. Je recommande **[PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/)** et **[Visual Studio Code](https://code.visualstudio.com/)**.
-Une fois un IDE choisi, récupérez le code du projet [![to complete](https://img.shields.io/badge/MFLIX!-2ea44f)](https://classroom.github.com/a/OMzGRSF0) en suivant les étapes :
+Une fois un IDE choisi, récupérez le code du projet [![to complete](https://img.shields.io/badge/MFLIX!-2ea44f)](https://classroom.github.com/a/DQW_kQws) en suivant les étapes :
 - Se Connecter ou créer un compte GitHub 
 - Cliquer sur "Accept this assignment"
 - Actualiser l'écran. 
