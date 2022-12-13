@@ -3,12 +3,12 @@
 Pour cette séance de TP, nous aurons besoin de :
 
 - [Créer un bac à sable](#créer-une-sandbox-ou-bac-à-sable)
-- [Charger des échantillons de données](#charger-des-echantillons-de-donnees)
+- [Charger des échantillons de données](#charger-des-echantillons-de-données)
 - [Installer un serveur MongoDB](#installer-mongodb-server)
 - [Installer Mongo Shell](#installer-mongo-shell)
 - [Installer les outils Mongo](#installer-les-outils-mongo)
 ## **Créer une sandbox ou bac à sable**
-Aller sur la page: https://www.mongodb.com/docs/atlas/.
+Aller sur la page : https://www.mongodb.com/docs/atlas/.
 Cliquer sur **Try Free** et créer un compte en remplissant le formulaire.
 Une fois le compte créé, MongoDB vous propose la création d'un cluster.
 ### **Choix du fournisseur Cloud**
@@ -42,6 +42,7 @@ Créer un utilisateur (username+password) pour sa base de données.
 Vous pouvez utiliser ces identifiants, ou les personnaliser :
 **Username** es901-student
 **Password** es901-mongodb-intro.
+
 <span style="background:red; color:white"><b>Attention :</b> Pour la suite des TPs, ne pas mettre de caractères spéciaux dans votre mot de passe.</span>
 
 ![create-a-user](../data/images/create-a-user.png)
@@ -80,14 +81,14 @@ Une fois que vos données sont chargées, suivez la suite des instructions.
 Télécharger le serveur Mongo DB via le lien suivant :
 https://www.mongodb.com/try/download/community
 Choisir le fichier .msi pour installer correctement Mongo.
-Une fois l'installation terminée, ajouter le chemin `C:\Program Files\MongoDB\Server\6.0\bin` de Mongo DB à la variable d'envrionnment Path du système.
+Une fois l'installation terminée, ajouter le chemin `C:\Program Files\MongoDB\Server\6.0\bin` de Mongo DB à la variable d'environnement Path du système.
 ### **Ajouter le bin au Path**
-- Ouvrir la barre de recherche dans "Démarrer",  cherchez “Edit the system environment variables” ou "Modifier les variables d'environnement système" en Français :
+- Ouvrir la barre de recherche dans "Démarrer", cherchez “Edit the system environment variables” ou "Modifier les variables d'environnement système" en français :
 
    
 [![Screenshot of Start Search](https://www.architectryan.com/static/start_menu-91c0473bae32fa3862658e4d6e62d75c-2facb.png)](https://www.architectryan.com/static/start_menu-91c0473bae32fa3862658e4d6e62d75c-2facb.png)
 
--   Cliquer sur le bouton “Environment Variables…”. 
+-   Cliquer sur le bouton "Environment Variables...". 
 - [![Screenshot of System Properties](https://www.architectryan.com/static/system_properties-f3a4f86cdd178c48ed9d8398743f85df-39c95.png)](https://www.architectryan.com/static/system_properties-f3a4f86cdd178c48ed9d8398743f85df-39c95.png)
 
 -   Sous la section “System Variables”, trouver la variable **Path** et cliquer sur "Edit"  
@@ -97,7 +98,7 @@ Une fois l'installation terminée, ajouter le chemin `C:\Program Files\MongoDB\S
 
 -   Cliquer sur "OK" pour sauvegarder cette modification.
 
--   La prise en compte de cette modification pourraît nécessiter le redémarrage de la machine.
+-   La prise en compte de cette modification pourrait nécessiter le redémarrage de la machine.
 
 -   Pour vérifier l'ajout de cette variable, ouvrir un terminal PowerShell:
 

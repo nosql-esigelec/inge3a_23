@@ -25,9 +25,9 @@ git push
 # Ticket #1: Connection
 [![to complete](https://img.shields.io/badge/to_complete-2ea44f)](https://)
 ### **User Story**
-"As a admin user, I'd like to be able to connect to the database from the application."
+"As an admin user, I'd like to be able to connect to the database from the application."
 ### **Task**
-Implement the **get_db** method in db.py to connect to the database MFLIX named `sample_mflix`.
+Implement the **get_db** method in db.py to connect to the database MFlix named `sample_mflix`.
 
 You can find examples in [resources/MongoClient.ipynb](resources/MongoClient.ipynb).
 
@@ -85,7 +85,7 @@ For this ticket, you will need to modify the method **build_query_sort_project*
 Already, the **build_query_sort_project** method is able to return results for two different types of movie search criteria:
 -   text: performs a text search in the movies collection
 -   cast: finds movies that include any of the wanted cast
-You just need to construct the query that queries the movies collection by the genres field.
+You just need to construct the query that queries the movies' collection by the genres field.
 **Hint**
 
 > Check the implementation of similar formats of search criteria - the genres query should be similar.
@@ -196,7 +196,7 @@ Which of the following write concerns are more durable than the default?
 
 ### **Task**
 
-For this Ticket, you'll be required to implement one method in db.py, **update_prefs**. This method allows updates to be made to the "preferences" field in the users collection.
+For this Ticket, you'll be required to implement one method in db.py, **update_prefs**. This method allows updates to be made to the "preferences" field in the users' collection.
 
 ### **MFlix Functionality**
 
@@ -225,7 +225,7 @@ For this ticket, you'll be required to extend the **get_movie** method in db.p
 
 The comments should be returned in order from most recent to least recent using the date key.
 
-Movie comments are stored in the comments collection, so this task can be accomplished by performing a $lookup. Refer to the Aggregation [Quick Reference](https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/?jmp=university#join-conditions-and-uncorrelated-sub-queries) for the specific syntax.
+Movie comments are stored in the comments' collection, so this task can be accomplished by performing a $lookup. Refer to the Aggregation [Quick Reference](https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/?jmp=university#join-conditions-and-uncorrelated-sub-queries) for the specific syntax.
 
 You can find examples of Aggregation with the Python driver in [resources/basic_aggregation.ipynb](resources/basic_aggregation.ipynb).
 

@@ -3,7 +3,7 @@
 # Interagir avec les bases de données
 [![to complete](https://img.shields.io/badge/TP_1_:_MongoDB_Basics-2ea44f)](https://github.com/nosql-esigelec/inge3a_23/tree/main/tp_2)
 
-Avant de commencer ce TP, assurez-vous d'avoir suivi les instructions du [document de configuration](tp_1_configurations.pdf).
+Avant de commencer ce TP, assurez-vous d'avoir suivi les instructions du [document de configuration](configurations.md).
 ## Local Database
 **Connexion à une base de données locale**
 
@@ -11,7 +11,7 @@ Ouvrez un **terminal**/**invite de commande** et tapez:
 ```PowerShell
 $mongosh 
 ```
-La sortie attendue est la suivante:
+La sortie attendue est la suivante :
 ![](../data/images/connect-to-local-db.png)
 **Afficher la version du serveur**
 ```JS
@@ -43,11 +43,11 @@ myFirstDB>
 ```
 >Cette commande va créer une nouvelle base de données, si celle-ci n'existe pas encore. Si elle existe, elle va commencer à l'utiliser. 
 
-<span style="background:green; color:white">**TAF: Créer une base de données relatives au management d'une école**
+<span style="background : green ; color : white">**TAF: Créer une base de données relatives au management d'une école**
 
 #### Collections
 **Créer des collections**
-Pour éffectuer des opérations dans la base de données courante, on utilise ==db==.
+Pour effectuer des opérations dans la base de données courante, on utilise ==db==.
 ```JS
 esigManagement> db.createCollection("students")
 { ok: 1 }
@@ -57,7 +57,7 @@ esigManagement> db.createCollection("students")
 esigManagement> show collections
 students
 ```
-<span style="background:green; color:white">**TAF: Créer une collection des enseignants de votre école et vérifier qu'elle a été créée.**
+<span style="background : green ; color : white">**TAF : Créer une collection des enseignants de votre école et vérifier qu'elle a été créée.**
 
 #### Documents
 ```JS
@@ -77,11 +77,11 @@ Exécutez la commande suivante sans utiliser *db.createCollection*.
 ```JS
 esigManagement> db.rooms.insertOne({"roomId": "B1215", "step": 3, "building": "B"})
 ```
-<span style="background:green; color:white">**TAF: Commenter le résultat de cette commande.**</span>
+<span style="background : green ; color : white">**TAF : Commenter le résultat de cette commande.**</span>
 
-<span style="background:green; color:white">**TAF: Une fois ce résultat commenté, supprimez la collection room en utilisant la méthode drop des collections.**</span>
+<span style="background : green ; color : white">**TAF : Une fois ce résultat commenté, supprimez la collection room en utilisant la méthode drop des collections.**</span>
 
-<span style="background:green; color:white">**TAF : Avec quels éléments d’une base relationnelle pourrait-on comparer une collection, un document ?**</span>
+<span style="background : green ; color : white">**TAF : Avec quels éléments d’une base relationnelle pourrait-on comparer une collection, un document ?**</span>
 
 Nous pouvons en insérer plus et plusieurs d'un coup.
 ```JS
@@ -109,14 +109,14 @@ esigManagement> db.students.insertMany([
 ```
 Nous venons d'ajouter les élèves Goku et Dora dans notre collection **students.**
 
-<span style="background:green; color:white">**TAF: Ajoutez des enseignants, avec les informations:**
+<span style="background : green ; color : white">**TAF: Ajoutez des enseignants, avec les informations:**
 - L'ancienneté
 - Les enseignements
 - Le salaire
 - Le département
 - Temps-partiel/plein
 
-<span style="background:green; color:white">**TAF: Ajoutez de nouveaux étudiants, avec des informations supplémentaires: localisation, promo(année) et dominante.**
+<span style="background : green ; color : white">**TAF : Ajoutez de nouveaux étudiants, avec des informations supplémentaires : localisation, promo(année) et dominante.**
 
 ### Opérations de base sur les documents dans MongoDB
 #### Compter des documents
@@ -156,9 +156,9 @@ esigManagement> db.students.find()
 ```
 Elle va lister tous les documents contenus dans la collection **students**.
 
-<span style="background:green; color:white">**TAF: Que remarquez vous dans les documents affichés?**
+<span style="background : green ; color : white">**TAF: Que remarquez vous dans les documents affichés?**
 
-<span style="background:green; color:white">**TAF: Affichez les enseignants enregistrés.**
+<span style="background : green ; color : white">**TAF: Affichez les enseignants enregistrés.**
 #### Trier les documents
 Afficher les élèves par ordre d'enregistrement dans la base. Du plus récent au plus ancien.
 ```JS
@@ -187,9 +187,9 @@ esigManagement> db.students.find().sort({"_id":-1})
   }
 ]
 ```
-<span style="background:green; color:white">**TAF: Afficher la liste des étudiants par ordre alphabétique**
+<span style="background : green ; color : white">**TAF: Afficher la liste des étudiants par ordre alphabétique**
 
-<span style="background:green; color:white">**TAF: Afficher la liste des étudiants par ordre d'ancienneté**
+<span style="background : green ; color : white">**TAF: Afficher la liste des étudiants par ordre d'ancienneté**
 ```JS
 esigManagement> db.students.find().sort({"fisrstName":1})
 [
@@ -230,9 +230,9 @@ esigManagement> db.students.find().limit(1)
   }
 ]
 ```
-<span style="background:green; color:white">**TAF: Afficher le dernier étudiant inscrit à l'école**
+<span style="background : green ; color : white">**TAF: Afficher le dernier étudiant inscrit à l'école**
 #### Se déconnecter du serveur
-Il est possible d'ajouter des données dans des base MongoDB sans s'y être connecté au prélable. Pour le faire, Il faut quitter le serveur.
+Il est possible d'ajouter des données dans des bases MongoDB sans s'y être connecté au préalable. Pour le faire, il faut quitter le serveur.
 ```
 exit
 ```
@@ -243,44 +243,44 @@ Importer des données depuis un fichier JSON
 ```shell
 mongoimport --jsonArray --db dev --collection collection_name --file movies.json
 ```
-<span style="background:green; color:white">**TAF: Commentez le résultat de cette commande. A quel élément d'un modèle relationnel vous fais penser cer résultat?**
+<span style="background : green ; color : white">**TAF : Commentez le résultat de cette commande. À quel élément d'un modèle relationnel vous fais penser ce résultat ?**
 
-<span style="background:green; color:white">**TAF: Vérifier que les données sont bien importées au bon endroit.**
+<span style="background : green ; color : white">**TAF : Vérifier que les données sont bien importées au bon endroit.**
 
 Importer des données depuis un fichier CSV
 ```shell
-mongoimport --type csv -d productDB -c products --headerline --drop products.csv --uri mongodb+srv://brice:bYUwmeLyq8yEW@cluster0.rdty5gv.mongodb.net
+mongoimport --type csv -d productDB -c products --headerline --drop products.csv --uri mongodb+srv://brice:bYUwmeLyq8yEW@cluster0.rdty5gv.mongodb.net
 ```
-<span style="background:green; color:white">**TAF: Vérifier que les données sont bien importées au bon endroit.**
+<span style="background : green ; color : white">**TAF : Vérifier que les données sont bien importées au bon endroit.**
 **Exercice : Manipulation des données importées.**
 - Combien de produits avons-nous en stock ?
 - Afficher la liste de tous ces produits.
 - Afficher en priorité les produit avec le stock le plus faible.
 - Quel est le produit le plus cher ?
 
-<span style="background:green; color:white"><b>Bonus :</b> Afficher uniquement le(s) produit(s) qui sont à commander aux forunisseurs(étant donné que le stock minimal recommandé est 5 par produit).</span> 
-**N.B** : La méthode insertOne permet d’insérer un document. Lorsque le champ `_id` n’est pas mentionné, mongoDB va créer ce champ et lui affecter une valeur, dans ce cas de type « Object ID ». L’unicité est garantie.
+<span style="background : green ; color : white"><b>Bonus :</b> Afficher uniquement le(s) produit(s) qui sont à commander aux fournisseurs(étant donné que le stock minimal recommandé est 5 par produit).</span> 
+**N. B** : La méthode insertOne permet d’insérer un document. Lorsque le champ `_id` n’est pas mentionné, mongoDB va créer ce champ et lui affecter une valeur, dans ce cas de type « Object ID ». L’unicité est garantie.
 Même s’il est possible de stocker dans un même champ des données de type différent, ce n’est pas une bonne pratique.
 ## Cloud Database 
-> Assurez vous d'avoir chargé les échantillons de données avant de démarrer cette partie.
+> Assurez-vous d'avoir chargé les échantillons de données avant de démarrer cette partie.
 
 Connectez-vous à votre DBaaS en utilisant votre lien de connexion provenant de Mongo Atlas. 
 ```shell
 mongosh mongodb+srv://{USERNAME}:{PASSWORD}@cluster0.rdty5gv.mongodb.net
 ```
-<span style="background:green; color:white">**TAF: Vérifier que l'existence des données chargées. Il s'agit de 9 databases nommées suivant le pattern sample_**
+<span style="background : green ; color : white">**TAF : Vérifier que l'existence des données chargées. Il s'agit de 9 databases nommées suivant le modèle sample_**
 ### Exploration de données avec Mongo Compass
 
 Ouvrir MongoDB Compass, puis se connecter au cluster Atlas via la chaine de connexion du cluster.
 
 **Explorer la base de données sample_analytics.**
 
-<span style="background:green; color:white">**TAF : Décrire cette base de données en la comparant à une base de données relationnelle.**
+<span style="background : green ; color : white">**TAF : Décrire cette base de données en la comparant à une base de données relationnelle.**
 - Combien de tables y a-t-il? 
 - Y a-t-il des relations entre les tables ? Si oui Lesquelles ?
 - La notion de normalisation est-elle respectée dans cette base de données ? Expliquer.
 
-<span style="background:green; color:white">**TAF : Décrire les données d'un document de la collection `customers`**.==
+<span style="background : green ; color : white">**TAF : Décrire les données d'un document de la collection `customers`**.==
 - Quels sont les types de chaque champ ?
 - Ces types sont-ils tous utilisables dans une base de données type MySQL ? Sinon, lesquels ?
 **Analyse de schéma**
@@ -303,11 +303,11 @@ L'équivalent de cette requête sur **Mongo Shell** est :
 ```JS
 sample_analytics>db.customers.find({username: "hmyers"})
 ```
-<span style="background:green; color:white">**TAF: Retrouver les informations sur son premier compte (627629)**
+<span style="background : green ; color : white">**TAF: Retrouver les informations sur son premier compte (627629)**
 
-<span style="background:green; color:white">**TAF : Quels produits détient cet utilisateur dans son compte ?**
+<span style="background : green ; color : white">**TAF : Quels produits détient cet utilisateur dans son compte ?**
 
-<span style="background:green; color:white">**TAF: Combien de transactions a réalisé ce compte?**
+<span style="background : green ; color : white">**TAF: Combien de transactions a réalisé ce compte?**
 
 Nous pourrons faire une analyse plus détaillée par la suite.
 
@@ -317,13 +317,13 @@ Documentation : https://docs.mongodb.com/manual/reference/operator/query-compari
 ![](../data/images/comparison-operators.png)
 
 - **Filtre Compass** : `{transaction_count: {$in: [80,90,100]}}`
-- <span style="background:green; color:white">**TAF : Rédiger la requête *Mongo Shell* qui retourne le nombre de comptes respectant cette condition.**
+- <span style="background : green ; color : white">**TAF : Rédiger la requête *Mongo Shell* qui retourne le nombre de comptes respectant cette condition.**
 ##### Les opérateurs logiques
 Documentation : https://docs.mongodb.com/manual/reference/operator/query-logical/
 - Cette estimation n'est pas vraiment fine, j'aimerais savoir précisément combien de comptes font entre 80 et 100 transactions.
 ![](../data/images/logic-operators.png)
 -  **Filtre Compass**: `{$and: [{transaction_count:{$gte:80}}, {transaction_count:{$lte:100}}]}`
--  <span style="background:green; color:white">**TAF : Rédiger la requête *Mongo Shell* qui retourne le nombre de comptes respectant ayant effectué entre 80 et 100 transactions.**
+-  <span style="background : green ; color : white">**TAF : Rédiger la requête *Mongo Shell* qui retourne le nombre de comptes respectant ayant effectué entre 80 et 100 transactions.**
 
 ##### Tri des résultats
 - Pour faciliter ma prise ma campagne de recommandations, je dois prioriser les prises de contacts, ce qui revient à trier les comptes selon des critères. Mes 2 premiers critères sont le nombre de transactions et l'ancienneté des comptes.
@@ -331,14 +331,14 @@ Je souhaite contacter en priorité les comptes les plus actifs et parmi cela, d�
 - **Tri Compass** : `{transaction_count:-1, bucket_start_date:1}`
 	-1 spécifie un ordre **décroissant**
 	1 spécifie un ordre **croissant**
-- <span style="background:green; color:white">**TAF : Rédiger la requête *Mongo Shell* qui retourne les comptes ayant entre 80 et 100 transactions, en respectant les critères de priorité définis.**
+- <span style="background : green ; color : white">**TAF : Rédiger la requête *Mongo Shell* qui retourne les comptes ayant entre 80 et 100 transactions, en respectant les critères de priorité définis.**
 ##### Recherche dans des documents imbriqués
 - Un autre paramètre déterminant dans mes choix de comptes est l'indice qu'achètent ou vendent mes comptes cibles. Pour optimiser mes chances de réussite, je choisis de contacter des personnes qui ont investi dans des boites au moins une boite tech, notamment **Google**.
 - Filtre Compass: `{"transactions.symbol":"goog"}`
 
-<span style="background:green; color:white">**TAF : Rédiger la requête *Mongo Shell* qui retourne dans l'ordre souhaité, les comptes respectant tous les critères précédant et qui en plus ont des actifs Google**
+<span style="background : green ; color : white">**TAF : Rédiger la requête *Mongo Shell* qui retourne dans l'ordre souhaité, les comptes respectant tous les critères précédant et qui en plus ont des actifs Google**
 
-<span style="background:green; color:white">**TAF : Ce critère a-t-il réduit la liste de comptes à cibler ? Si oui, de combien ? (requête à l'appui)**
+<span style="background : green ; color : white">**TAF : Ce critère a-t-il réduit la liste de comptes à cibler ? Si oui, de combien ? (requête à l'appui)**
 ##### Recherche sur des tableaux (Array)
 Maintenant que j'ai une liste de comptes restreinte selon les transactions, je souhaite filtrer les comptes selon leur contenu en termes de produits. 
 - Je souhaite exclure les comptes : 
@@ -373,7 +373,7 @@ sample_analytics>db.accounts.find(
 ]
 ```
 ##### Modification de documents
-Par appel téléphonique, la cliente portant le nom "Katherine David" m'a indiqué un changement d'adresse e-mail..
+Par appel téléphonique, la cliente portant le nom "Katherine David" m'a indiqué un changement d'adresse e-mail.
 Sa nouvelle adresse est `katherine.david@gmail.com`.
 ```JS
 sample_analytics>db.customers.updateOne(
@@ -422,10 +422,10 @@ Analysons cette requête
 })
 ```
 - [[address.location]] est le champ cible  
-- [[$geoWithin]] est l'opérateur de sélection géospatial qui permet de sélectionner des géomtries dans un espace défini
+- [[$geoWithin]] est l'opérateur de sélection géospatial qui permet de sélectionner des géométries dans un espace défini
 - [[$centerSphere]] est un spécificateur de surface géométrique. Ce dernier spécifie un cercle de centre `(2.171460349683927, 41.38994371312659)` et rayon `0.0011577866626459041`
 
-<span style="background:green; color:white"><span style="background:green; color:white">**TAF: Rédiger la requête *Mongo Shell* permettant de lister les proches selon ces critères:**</span>
+<span style="background : green ; color : white"><span style="background : green ; color : white">**TAF: Rédiger la requête *Mongo Shell* permettant de lister les proches selon ces critères:**</span>
 - Proche de Rio de Janeiro
 - Avec 2 lits maximum
 - Nuitée inférieure à 100 €
@@ -442,6 +442,6 @@ Retrouver les documents dont les champs sont nn renseignés peut se faire de 3 m
 correspondant au **type 10 (BSON type)**.
 - **Filtre Compass :** `{"first_review": {$type: 10} }`
 
-<span style="background:green; color: white">**TAF : Rédiger la requête Mongo Shell, permettant de lister les logements respectant les 5 critères précédents, avec en plus une restriction sur ceux qui ont au moins 1 commentaire. Je souhaite voir en priorité les logements les moins chers.**</span>
+<span style="background : green ; color : white">**TAF : Rédiger la requête Mongo Shell, permettant de lister les logements respectant les 5 critères précédents, avec en plus une restriction sur ceux qui ont au moins 1 commentaire. Je souhaite voir en priorité les logements les moins chers.**</span>
 
-<span style="background:green; color: white">**TAF : Comparer le nombre de résultats avec la requête précédente pour vérifier l'impact.**</span>
+<span style="background : green ; color : white">**TAF : Comparer le nombre de résultats avec la requête précédente pour vérifier l'impact.**</span>

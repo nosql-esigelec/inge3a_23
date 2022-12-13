@@ -3,12 +3,12 @@
 Dans ce TP, nous allons découvrir l'utilisation de MongoDB avec le driver officiel Python : **PyMongo**.
 
 Ce TP s'articulera en 2 parties:
-- **Notebook** 
+- **1- Introduction à PyMongo** 
 
-Dans un [notebook](getting_started_with_pymongo.ipynb), nous ferons une introduction à l'utilisation de PyMongo.
-- **MFLIX**
+Dans un notebook, nous ferons une introduction à l'utilisation de PyMongo.
+- **2- MFlix**
 
-Nous utiliserons le projet MFLIX, en guise de cas pratique. C'est une application dont l'interface graphique est développée, mais il manque des fonctionnalités à implémenter notamment celles qui interagissent avec la base de données. 
+Nous utiliserons le projet MFlix, en guise de cas pratique. C'est une application dont l'interface graphique est développée, mais il manque des fonctionnalités à implémenter notamment celles qui interagissent avec la base de données. 
  
 Il s'agit d'une application web permettant de consulter et de noter des films.
 Son interface graphique est développée, mais il manque des fonctionnalités à implémenter notamment celles qui interagissent avec la base de données. 
@@ -31,29 +31,32 @@ Durant le TP, nous allons mettre en place des requêtes permettant à des utilis
 - Modifier des documents dans une application python via PyMongo
 - Supprimer des documents, collections dans une application python via PyMongo
 
-Afin de mener à bien ce TP, bien vouloir prendre connaissance des informations suivantes:
+Afin de mener à bien ce TP, bien vouloir prendre connaissance des informations suivantes :
 
-# Projet MFlix 
+# 1- Introduction à PyMongo
 
-MFlix a deux composantes principales:
+Dans cette partie, téléchargez ce [notebook](getting_started_with_pymongo.ipynb) sur votre machine, puis ouvrez-le sur Jupyter notebook/lab.
+# 2- MFlix 
 
--   **_Frontend_**: Toutes les fonctionnalités de l’interface utilisateur sont déjà implémentées pour vous, ce qui inclut une application React intégrée dont vous n’avez pas à vous soucier.
--   **_Backend_**: Le projet, qui fournit le service nécessaire à l’application. Le code est déjà mis en œuvre sauf certaines fonctions que vous devrez implémenter.
+L'application MFlix a deux composantes principales :
+
+-   **_Frontend_** : Toutes les fonctionnalités de l’interface utilisateur sont déjà implémentées pour vous, ce qui inclut une application React intégrée dont vous n’avez pas à vous soucier.
+-   **_Backend_** : Le projet, qui fournit le service nécessaire à l’application. Le code est déjà mis en œuvre sauf certaines fonctions que vous devrez implémenter.
 
 Vous ne modifierez que les fonctions qui ont une interaction avec MongoDB.
 # Sommaire
 
--   Les consignes d'implémentation sont dans le fichie [build_queries_with_pymongo.md](build_queries_with_pymongo.md)
+-   Les consignes d'implémentation sont dans le fichier [build_queries_with_pymongo.md](build_queries_with_pymongo.md)
 -   La couche API est implémentée par `movies.py` et `user.py`  dans le dossier ``**mflix/api**`` 
     -   Ces fichiers ne sont pas à modifier
 -   `db.py`  contient toutes les méthodes qui interagissent avec la base de données
-    -   C'est ce fichier qui devra être modifié pour implémenter les fontionnalités demandées
--   Le dossier **``tests``**  contient tous les tests unitaires
+    -   C'est ce fichier qui devra être modifié pour implémenter les fonctionnalités demandées
+-   Le dossier **``tests``** contient tous les tests unitaires
     - Ces tests seront à exécuter pour valider les résultats
     - Il est recommandé de mettre l'accent le passage des tests un par un, plutôt qu'en une fois 
 # Bases de données
 
-Nous utiliserons _MongoDB Atlas_, la Database as a Service (DBaaS) de MongoDB, il faudra avoir crée un cluster Atlas au préalable. 
+Nous utiliserons _MongoDB Atlas_, la Database as a Service (DBaaS) de MongoDB, il faudra avoir créé un cluster Atlas au préalable. 
 
 Afin d'être correctement exécuté, le projet MFlix a besoin que certaines dépendances soient installées au préalable. Elles sont listées dans le fichier `requirements.txt`.
 
@@ -70,10 +73,10 @@ Une fois un IDE choisi, récupérez le code du projet [![to complete](https://im
 ![img.png](../data/images/classroom-assignment.png)
 
 ## Anaconda
-Nous allons utiliser  Anaconda  pour installer Python 3.7 et gérer l'environnement.
+Nous allons utiliser Anaconda pour installer Python 3.7 et gérer l'environnement.
 > Installer Anaconda si besoin via https://www.anaconda.com/products/distribution
 
-Avec Ananconda, créer un et activer un environnement. 
+Avec Anaconda, créer un et activer un environnement. 
 
 ```shell
 # enter mflix-python folder
@@ -88,7 +91,7 @@ activate mflix
 
 ## Dépendances Python
 
-Une fois que Python 3.7 est installé, installer les dépendances via la commande:
+Une fois que Python 3.7 est installé, installer les dépendances via la commande :
 ```
 pip install -r requirements.txt
 ```
@@ -97,20 +100,20 @@ pip install -r requirements.txt
 
 À la racine du projet, se trouvent 2 fichiers dotini.
 Ouvrir ce fichier et saisir la chaine de connection de son cluster Atlas.
-Rassurez-vous de mettre cette information entre quotes comme ci-dessous:
+Rassurez-vous de mettre cette information entre quotes comme ci-dessous :
 
 ```
 MFLIX_DB_URI = "mongodb+srv://..."
 ```
 
-Renommer ce fichier .ini avec l'une des commandes:  
+Renommer ce fichier .ini avec l'une des commandes :  
 
 ```
 ren dotini_win .ini # on Windows
 mv dotini_unix .ini  # on Unix
 ```
 
-_Note:_ Une fois renommé, il se peut que le fichier ne soit plus visible via l'explorateur de fichier.
+_Note :_ Une fois renommé, il se peut que le fichier ne soit plus visible via l'explorateur de fichier.
 Vous pouvez cependant l'ouvrir à l'aide d'une des commandes :
 ```
 vi .ini       # on Unix
@@ -123,7 +126,7 @@ Une fois cette configuration terminée, vous pouvez lancer l'application MFlix :
 python run.py
 ```
 
-Vous pourreez accéder à votre application via ce lien  [http://localhost:5000/](http://localhost:5000/).
+Vous pourrez accéder à votre application via ce lien [http://localhost:5000/](http://localhost:5000/).
 
 # Exécutez les tests unitaires
 
