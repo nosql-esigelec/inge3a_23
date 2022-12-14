@@ -25,4 +25,4 @@ Nous allons également utiliser l'interface graphique [MongoDB Compass](https://
 - Réaliser des opérations basiques de CRUD via Mongo Shell et Compass
 - Importer des données à partir de fichiers dans une base Mongo.
 
-Afin de mener à bien ce TP, bien vouloir vous suivre les consignes du [document de configuration](tp_1_configurations.pdf).
+Afin de mener à bien ce TP, bien vouloir vous suivre les consignes du [document de configuration](configurations.md).
