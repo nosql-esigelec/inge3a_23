@@ -47,7 +47,7 @@ myFirstDB>
 
 #### Collections
 **Créer des collections**
-Pour effectuer des opérations dans la base de données courante, on utilise ==db==.
+Pour effectuer des opérations dans la base de données courante, on utilise db.
 ```JS
 esigManagement> db.createCollection("students")
 { ok: 1 }
@@ -72,7 +72,7 @@ esigManagement> db.students.insertOne({
   insertedId: ObjectId("636ec2a25418039f85c97412")
 }
 ```
-Nous venons d'ajouter l'élève Ducobu à notre base de données students.
+Nous venons d'ajouter l'élève Ducobu à notre collection students.
 Exécutez la commande suivante sans utiliser *db.createCollection*.
 ```JS
 esigManagement> db.rooms.insertOne({"roomId": "B1215", "step": 3, "building": "B"})
@@ -280,7 +280,7 @@ Ouvrir MongoDB Compass, puis se connecter au cluster Atlas via la chaine de conn
 - Y a-t-il des relations entre les tables ? Si oui Lesquelles ?
 - La notion de normalisation est-elle respectée dans cette base de données ? Expliquer.
 
-<span style="background : green ; color : white">**TAF : Décrire les données d'un document de la collection `customers`**.==
+<span style="background : green ; color : white">**TAF : Décrire les données d'un document de la collection `customers`**.
 - Quels sont les types de chaque champ ?
 - Ces types sont-ils tous utilisables dans une base de données type MySQL ? Sinon, lesquels ?
 **Analyse de schéma**
