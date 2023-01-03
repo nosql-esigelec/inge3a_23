@@ -19,7 +19,5 @@ Ces fichiers README.md sont très importants, car pouvant inclure des pré-requi
 Les TPs sont donc :
 - [MongoDB avec MongoShell et les outils Mongo](tp_1)
 - [MongoDB dans une application python via PyMongo](tp_2)
-- [Neo4j avec Neo4j Desktop]()
-- [Neo4j dans une application python]()
-- [Déploiement d'une base de données NoSQL - Partie 1]()
-- [Déploiement d'une base de données NoSQL - Partie 2]()
+- [Neo4j avec Neo4j Desktop, dans une application python](tp_3)
+
