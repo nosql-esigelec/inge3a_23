@@ -3,10 +3,10 @@
 Dans ce TP, nous allons découvrir l'utilisation de MongoDB avec le driver officiel Python : **PyMongo**.
 
 Ce TP s'articulera en 2 parties:
-- **1- Introduction à PyMongo** 
+#### **Introduction à PyMongo** 
 
 Dans un notebook, nous ferons une introduction à l'utilisation de PyMongo.
-- **2- MFlix**
+#### **MFlix**
 
 Nous utiliserons le projet MFlix, en guise de cas pratique. C'est une application dont l'interface graphique est développée, mais il manque des fonctionnalités à implémenter notamment celles qui interagissent avec la base de données. 
  
@@ -33,11 +33,11 @@ Durant le TP, nous allons mettre en place des requêtes permettant à des utilis
 
 Afin de mener à bien ce TP, bien vouloir prendre connaissance des informations suivantes :
 
-# 1- Introduction à PyMongo
+# Introduction à PyMongo
 
 Dans cette partie, téléchargez ce [notebook](getting_started_with_pymongo.ipynb) sur votre machine, puis ouvrez-le sur Jupyter notebook/lab.
 Ici, nous allons effectuer nos premières opérations de **CRUD** : Create, Read, Update and Read via PyMongo. Une fois cette partie d'introduction terminée, nous passerons à la partie MFlix.
-# 2- MFlix 
+# MFlix 
 
 L'application MFlix a deux composantes principales :
 
